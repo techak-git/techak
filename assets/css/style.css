@@ -198,12 +198,73 @@ img {
 	padding: 32px 28px;
 }
 
+.scroll-reveal {
+	opacity: 0;
+	transform: translate3d(0, 22px, 0) scale(0.992);
+	filter: blur(6px);
+	transition:
+		opacity 0.95s cubic-bezier(0.22, 1, 0.36, 1),
+		transform 0.95s cubic-bezier(0.22, 1, 0.36, 1),
+		filter 0.95s ease;
+	transition-delay: var(--reveal-delay, 0ms);
+	will-change: opacity, transform, filter;
+}
+
+.scroll-reveal.is-visible {
+	opacity: 1;
+	transform: translate3d(0, 0, 0) scale(1);
+	filter: blur(0);
+}
+
+.scroll-focus-item {
+	transition:
+		opacity 0.72s cubic-bezier(0.22, 1, 0.36, 1),
+		transform 0.72s cubic-bezier(0.22, 1, 0.36, 1),
+		filter 0.72s ease,
+		box-shadow 0.72s ease,
+		border-color 0.72s ease;
+}
+
+.scroll-focus-enabled .scroll-focus-item.is-visible:not(.is-active) {
+	opacity: 0.58;
+	transform: translate3d(0, 0, 0) scale(0.994);
+	filter: saturate(0.82) blur(0.6px);
+}
+
+.scroll-focus-enabled .scroll-focus-item.is-visible.is-active {
+	opacity: 1;
+	transform: translate3d(0, 0, 0) scale(1.004);
+	filter: none;
+	border-color: rgba(125, 211, 252, 0.22);
+	box-shadow: 0 26px 72px rgba(0, 0, 0, 0.42);
+}
+
 .hero-section {
 	min-height: calc(100vh - 90px);
 	display: grid;
 	grid-template-columns: 1.1fr 0.9fr;
 	align-items: center;
 	gap: 30px;
+}
+
+.hero-copy > * {
+	background: transparent;
+	box-shadow: none;
+}
+
+.scroll-focus-enabled .hero-copy > .scroll-focus-item.is-visible:not(.is-active),
+.scroll-focus-enabled .hero-copy > .scroll-focus-item.is-visible.is-active {
+	box-shadow: none;
+	border-color: transparent;
+}
+
+.scroll-focus-enabled .hero-panel.scroll-focus-item.is-visible:not(.is-active),
+.scroll-focus-enabled .hero-panel.scroll-focus-item.is-visible.is-active {
+	opacity: 1;
+	transform: translate3d(0, 0, 0) scale(1);
+	filter: none;
+	border-color: transparent;
+	box-shadow: none;
 }
 
 .eyebrow {
@@ -303,6 +364,12 @@ img {
 .profile-side-panel {
 	display: grid;
 	gap: 18px;
+}
+
+.hero-panel,
+.hero-panel .terminal-card {
+	filter: none;
+	backdrop-filter: none;
 }
 
 .terminal-card,
@@ -761,23 +828,6 @@ strong {
 		text-align: left;
 	}
 
-	.site-header.is-compact .site-header-inner {
-		justify-content: center;
-	}
-
-	.site-header.is-compact .brand-mark {
-		position: absolute;
-		left: 50%;
-		margin-right: 0;
-		transform: translateX(-50%);
-	}
-
-	.site-header.is-compact .nav-search-toggle,
-	.site-header.is-compact .nav-menu-toggle {
-		opacity: 0;
-		pointer-events: none;
-	}
-
 	.nav-search {
 		position: fixed;
 		top: 0;
@@ -857,11 +907,6 @@ strong {
 		letter-spacing: 0.08em;
 	}
 
-	.site-header.is-compact .site-header-inner {
-		padding-top: 8px;
-		padding-bottom: 8px;
-	}
-
 	.nav-link {
 		padding: 6px 8px;
 		font-size: 0.76rem;
@@ -873,6 +918,26 @@ strong {
 		height: 22px;
 	}
 
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+
+	.scroll-reveal,
+	.scroll-reveal.is-visible,
+	.scroll-focus-item,
+	.scroll-focus-enabled .scroll-focus-item.is-visible:not(.is-active),
+	.scroll-focus-enabled .scroll-focus-item.is-visible.is-active,
+	.feature-card,
+	.tip-card,
+	.button {
+		transition: none;
+		transform: none;
+		filter: none;
+		opacity: 1;
+	}
+}
 	.feature-card,
 	.tip-card,
 	.timeline-card,
