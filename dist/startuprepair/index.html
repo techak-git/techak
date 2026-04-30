@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Startup Repair</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../page.css">
+</head>
+
+<body>
+  <div class="site-shell tutorial-shell">
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a class="brand-mark" href="../../index.html">ANIL<span>/DEV</span></a>
+        <nav class="site-nav">
+          <a href="../../index.html" class="nav-link">Home</a>
+          <a href="../../about.html" class="nav-link">About</a>
+          <a href="../../assets/Profile.pdf" class="nav-link" target="_blank" rel="noopener">Resume</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="tutorial-main">
+      <section class="tutorial-hero section-shell">
+        <p class="eyebrow">Tips & Tricks</p>
+        <h1>Startup Repair Commands for Windows</h1>
+        <p class="tutorial-lead">A quick reference for running recovery commands from the Windows repair environment.</p>
+      </section>
+
+      <article class="tutorial-article">
+        <img src="startup.jpg" alt="Windows startup repair screen" width="300" border="2px">
+        <p>Click on <b>Advanced Option &gt; Troubleshoot &gt; Advanced Option &gt; Command Prompt</b>.</p>
+        <p>Run these commands one by one:</p>
+        <pre><code>chkdsk
+sfc /scannow
+bootrec /fixmbr
+bootrec /rebuildbcd
+exit</code></pre>
+        <p>After that, click on <b>Continue</b>. Your system should reboot automatically.</p>
+      </article>
+    </main>
+  </div>
+</body>
+
+</html>

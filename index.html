@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=5">
+    <meta name="description" content="Anil Kumar developer portfolio featuring automation work, operations systems, analytics, and practical tech tips.">
+    <meta name="author" content="Anil Kumar">
+    <title>Anil Kumar | Developer Portfolio</title>
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="site-shell">
+        <header class="site-header">
+            <div class="site-header-inner">
+                <a class="brand-mark" href="index.html">ANIL<span>/DEV</span></a>
+                <button class="nav-search-toggle" id="searchToggle" onclick="toggleSearch()" aria-label="Open search">
+                    <i class="ti-search"></i>
+                </button>
+                <div class="nav-search" id="navSearch">
+                    <input type="text" id="mainSearch" class="nav-search-input" placeholder="Search projects, skills, and tips...">
+                    <button class="nav-search-close" onclick="toggleSearch()" aria-label="Close search">
+                        <i class="ti-close"></i>
+                    </button>
+                </div>
+                <nav class="site-nav">
+                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="assets/Profile.pdf" class="nav-link" target="_blank" rel="noopener">Resume</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero-section section-shell">
+                <div class="hero-copy">
+                    <h1 class="hero-title">Building practical systems for operations, reporting, and workflow automation.</h1>
+                    <p class="hero-text">I design internal tools, automate repetitive work, and turn raw business data into clear operating decisions. This site brings together my developer profile and the tech tips I actively use.</p>
+                    <div class="hero-actions">
+                        <a href="about.html" class="button button-primary">Explore Profile</a>
+                        <a href="assets/Profile.pdf" class="button button-secondary" target="_blank" rel="noopener">Open Resume</a>
+                    </div>
+                    <div class="hero-badges">
+                        <span class="badge-pill">Python</span>
+                        <span class="badge-pill">SQL</span>
+                        <span class="badge-pill">Power BI</span>
+                        <span class="badge-pill">Automation</span>
+                    </div>
+                </div>
+
+                <div class="hero-panel">
+                    <div class="terminal-card">
+                        <div class="terminal-topbar">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="terminal-body">
+                            <p><span class="terminal-prompt">&gt;</span> profile.role = "Operations Manager + Developer"</p>
+                            <p><span class="terminal-prompt">&gt;</span> focus = ["Automation", "MIS", "E-commerce Ops"]</p>
+                            <p><span class="terminal-prompt">&gt;</span> status = "Shipping real workflow improvements"</p>
+                        </div>
+                    </div>
+                    <div class="metric-grid">
+                        <article class="metric-card searchable-card">
+                            <span class="metric-label">Experience</span>
+                            <strong class="metric-value">3+ Years</strong>
+                        </article>
+                        <article class="metric-card searchable-card">
+                            <span class="metric-label">Primary Stack</span>
+                            <strong class="metric-value">Python + SQL</strong>
+                        </article>
+                        <article class="metric-card searchable-card">
+                            <span class="metric-label">Reporting</span>
+                            <strong class="metric-value">Power BI / Excel</strong>
+                        </article>
+                        <article class="metric-card searchable-card">
+                            <span class="metric-label">Work Style</span>
+                            <strong class="metric-value">System-First</strong>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-shell">
+                <div class="section-heading">
+                    <p class="eyebrow">What I Do</p>
+                    <h2 class="section-title">Developer thinking applied to business operations.</h2>
+                </div>
+                <div class="feature-grid" id="mainResourcesGrid">
+                    <article class="feature-card searchable-card" onclick="openLink('about.html#about-me')">
+                        <div class="feature-icon"><i class="ti-layout"></i></div>
+                        <h3>Profile Summary</h3>
+                        <p>Overview of my background in operations, automation, and process design.</p>
+                        <span class="feature-tag">About</span>
+                    </article>
+                    <article class="feature-card searchable-card" onclick="openLink('about.html#experience')">
+                        <div class="feature-icon"><i class="ti-briefcase"></i></div>
+                        <h3>Work Experience</h3>
+                        <p>Execution across warehouse operations, dispatch workflows, catalog handling, and MIS reporting.</p>
+                        <span class="feature-tag">Experience</span>
+                    </article>
+                    <article class="feature-card searchable-card" onclick="openLink('about.html#skills')">
+                        <div class="feature-icon"><i class="ti-settings"></i></div>
+                        <h3>Developer Skills</h3>
+                        <p>Python, SQL, dashboarding, data analysis, and practical internal-tool delivery.</p>
+                        <span class="feature-tag">Skills</span>
+                    </article>
+                    <article class="feature-card searchable-card" onclick="openLink('about.html#certifications')">
+                        <div class="feature-icon"><i class="ti-star"></i></div>
+                        <h3>Certifications</h3>
+                        <p>Verified learning across Excel, data visualization, cloud data sharing, and AI.</p>
+                        <span class="feature-tag">Learning</span>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section-shell">
+                <div class="section-heading">
+                    <p class="eyebrow">Tips & Tricks</p>
+                    <h2 class="section-title">Practical notes and how-to pages I keep handy.</h2>
+                </div>
+                <div class="tips-grid" id="tipsGrid">
+                    <article class="tip-card searchable-card" onclick="openLink('dist/winget/index.html')">
+                        <div class="tip-card-head">
+                            <span class="tip-type">Windows</span>
+                            <i class="ti-package"></i>
+                        </div>
+                        <h3>Winget Upgrade Guide</h3>
+                        <p>Quick instructions for updating installed packages with the Windows Package Manager.</p>
+                    </article>
+                    <article class="tip-card searchable-card" onclick="openLink('dist/adsblock/index.html')">
+                        <div class="tip-card-head">
+                            <span class="tip-type">Android</span>
+                            <i class="ti-shield"></i>
+                        </div>
+                        <h3>Block Ads with Private DNS</h3>
+                        <p>A simple Android setup tip using private DNS on supported devices.</p>
+                    </article>
+                    <article class="tip-card searchable-card" onclick="openLink('dist/startuprepair/index.html')">
+                        <div class="tip-card-head">
+                            <span class="tip-type">Windows</span>
+                            <i class="ti-wand"></i>
+                        </div>
+                        <h3>Startup Repair Commands</h3>
+                        <p>Recovery steps and command-line references for common Windows startup issues.</p>
+                    </article>
+                    <article class="tip-card searchable-card" onclick="openLink('dist/microsoftoffice2021/index.html')">
+                        <div class="tip-card-head">
+                            <span class="tip-type">Office</span>
+                            <i class="ti-microsoft"></i>
+                        </div>
+                        <h3>Office Configuration Notes</h3>
+                        <p>Reference screenshots and setup flow for Microsoft Office configuration.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section-shell contact-strip">
+                <div>
+                    <p class="eyebrow">Reach Out</p>
+                    <h2 class="section-title">Open to developer, automation, and operations-focused work.</h2>
+                </div>
+                <div class="contact-actions searchable-card">
+                    <a href="mailto:anil9409030562@gmail.com" class="button button-primary">Email Me</a>
+                    <a href="https://www.linkedin.com/in/anilkumar-49122a27b" class="button button-secondary" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        function toggleSearch() {
+            const navSearch = document.getElementById('navSearch');
+            const searchToggle = document.getElementById('searchToggle');
+            const searchInput = document.getElementById('mainSearch');
+
+            if (navSearch.classList.contains('active')) {
+                navSearch.classList.remove('active');
+                searchToggle.style.display = 'inline-flex';
+                searchInput.value = '';
+                filterCards('');
+            } else {
+                navSearch.classList.add('active');
+                searchToggle.style.display = 'none';
+                setTimeout(() => searchInput.focus(), 100);
+            }
+        }
+
+        function openLink(url, newTab = false) {
+            if (newTab) {
+                window.open(url, '_blank', 'noopener');
+                return;
+            }
+
+            window.location.href = url;
+        }
+
+        function filterCards(searchTerm) {
+            const cards = document.querySelectorAll('.searchable-card');
+            cards.forEach(function(card) {
+                const text = card.textContent.toLowerCase();
+                card.style.display = text.includes(searchTerm) ? '' : 'none';
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('mainSearch');
+            if (searchInput) {
+                searchInput.addEventListener('input', function() {
+                    filterCards(searchInput.value.toLowerCase());
+                });
+            }
+        });
+    </script>
+</body>
+</html>

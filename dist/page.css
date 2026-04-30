@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background:
+        radial-gradient(circle at top right, rgba(125, 211, 252, 0.12), transparent 22%),
+        linear-gradient(180deg, #010101 0%, #070707 100%);
+    color: #f4f7fb;
+    font-family: 'Space Grotesk', sans-serif;
+    line-height: 1.85;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 44px 28px 80px;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    background-size: 48px 48px;
+    opacity: 0.35;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.tutorial-shell {
+    max-width: none;
+}
+
+.tutorial-main {
+    padding-bottom: 56px;
+}
+
+.tutorial-hero {
+    min-height: auto;
+    padding-top: 40px;
+    padding-bottom: 18px;
+}
+
+.tutorial-lead {
+    max-width: 720px;
+    color: #aeb7c1;
+    font-size: 1rem;
+}
+
+.tutorial-article {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 28px 32px;
+}
+
+.tutorial-article section,
+.tutorial-article > p,
+.tutorial-article > img,
+.tutorial-article > pre,
+.tutorial-article > table,
+.tutorial-article > blockquote,
+.tutorial-article > ul,
+.tutorial-article > ol,
+.tutorial-article > hr {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 22px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.tutorial-article section,
+.tutorial-article > p,
+.tutorial-article > ul,
+.tutorial-article > ol,
+.tutorial-article > blockquote {
+    padding: 24px;
+    margin-bottom: 18px;
+}
+
+.tutorial-article > p + img,
+.tutorial-article > img + p,
+.tutorial-article > p + p {
+    margin-top: 0;
+}
+
+.tutorial-article h2,
+.tutorial-article h3,
+.tutorial-article h4 {
+    margin-top: 0;
+}
+
+.tutorial-article img {
+    max-width: 100%;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 18px;
+    margin-top: 34px;
+}
+
+h1 {
+    font-size: clamp(2.2rem, 6vw, 3.8rem);
+    letter-spacing: -0.04em;
+    margin-top: 0;
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+h2 {
+    font-size: clamp(1.45rem, 4vw, 2.3rem);
+}
+
+h3 {
+    font-size: clamp(1.15rem, 3vw, 1.6rem);
+}
+
+p, li, td, th {
+    color: #aeb7c1;
+    font-size: 1rem;
+}
+
+a {
+    color: #7dd3fc;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #d1f1ff;
+}
+
+code {
+    font-family: 'JetBrains Mono', monospace;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 3px 8px;
+    color: #f4f7fb;
+}
+
+pre {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 22px;
+    margin: 24px 0;
+    overflow-x: auto;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+pre code {
+    background: transparent;
+    border: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    margin: 28px 0;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 28px 0;
+    overflow: hidden;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.025);
+}
+
+th, td {
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    text-align: left;
+}
+
+th {
+    color: #f4f7fb;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.84rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: rgba(125, 211, 252, 0.08);
+}
+
+ul, ol {
+    padding-left: 24px;
+    margin: 18px 0 22px;
+}
+
+li + li {
+    margin-top: 8px;
+}
+
+blockquote {
+    margin: 26px 0;
+    padding: 18px 20px;
+    border-left: 3px solid #7dd3fc;
+    border-radius: 0 16px 16px 0;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+strong, b {
+    color: #f4f7fb;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    margin: 36px 0;
+}
+
+::selection {
+    background: rgba(125, 211, 252, 0.35);
+    color: #fff;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0b0b0b;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.16);
+    border-radius: 999px;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 26px 16px 56px;
+    }
+
+    .tutorial-hero {
+        padding-top: 26px;
+    }
+
+    .tutorial-article {
+        padding: 0 16px 24px;
+    }
+
+    .tutorial-article section,
+    .tutorial-article > p,
+    .tutorial-article > ul,
+    .tutorial-article > ol,
+    .tutorial-article > blockquote {
+        padding: 18px;
+    }
+
+    pre {
+        padding: 16px;
+    }
+
+    th, td {
+        padding: 12px;
+    }
+}

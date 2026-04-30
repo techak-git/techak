@@ -1,0 +1,2012 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    
+    <!-- Primary Meta Tags -->
+    <title>DarkOSINT - Pro Verification Tool | Secure Aadhaar & Mobile Lookup</title>
+    <meta name="description" content="Professional OSINT verification tool for Aadhaar, mobile number, and family details lookup. Secure, fast, and reliable data verification services with subscription plans.">
+    <meta name="keywords" content="OSINT tool, Aadhaar verification, mobile lookup, family details search, data verification, intelligence tool, identity verification, background check">
+    <meta name="author" content="DarkOSINT">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="googlebot" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://darkosint.in/">
+    <meta property="og:title" content="DarkOSINT - Professional Verification Tool">
+    <meta property="og:description" content="Secure Aadhaar, mobile number, and family details verification platform with instant results">
+    <meta property="og:image" content="https://darkosint.in/images/og-image.jpg">
+    <meta property="og:site_name" content="DarkOSINT">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://darkosint.in/">
+    <meta property="twitter:title" content="DarkOSINT - Pro Verification Tool">
+    <meta property="twitter:description" content="Professional OSINT verification services for Aadhaar, mobile & family details">
+    <meta property="twitter:image" content="https://darkosint.in/images/twitter-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://darkosint.in/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://checkout.razorpay.com">
+    <link rel="dns-prefetch" href="https://unpkg.com">
+    
+    <!-- Mobile & PWA -->
+    <meta name="theme-color" content="#10FF00">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Fonts & Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    
+    <!-- Structured Data JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "DarkOSINT",
+        "description": "Professional verification tool for Aadhaar, mobile numbers, and family details",
+        "url": "https://darkosint.in",
+        "applicationCategory": "BusinessApplication",
+        "offers": {
+            "@type": "Offer",
+            "price": "50",
+            "priceCurrency": "INR",
+            "description": "Basic credit pack for verification services"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.7",
+            "reviewCount": "156"
+        },
+        "featureList": [
+            "Aadhaar Verification",
+            "Mobile Number Lookup",
+            "Family Details Search",
+            "Encrypted Connections"
+        ],
+        "operatingSystem": "All"
+    }
+    </script>
+    
+    <!-- Google Analytics (Replace with your ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K355FXTZY0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K355FXTZY0');
+    </script>
+
+    <style>
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f3f4f6;
+            --bg-accent: #e5e7eb;
+            --text-primary: #111827;
+            --text-secondary: #4b5563;
+            --text-accent: #6b7280;
+            --border-color: #d1d5db;
+            --success-color: #10b981;
+            --error-color: #ef4444;
+            --warning-color: #f59e0b;
+            --highlight-color: #059669;
+        }
+
+        body.dark-mode {
+            --bg-primary: #0a0f0a;
+            --bg-secondary: #000000;
+            --bg-accent: #1f2937;
+            --text-primary: #10FF00;
+            --text-secondary: #88FF88;
+            --text-accent: #34d399;
+            --border-color: #10FF00;
+            --success-color: #10FF00;
+            --error-color: #FF3333;
+            --warning-color: #FFCC00;
+            --highlight-color: #10FF00;
+        }
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            transition: background-color 0.3s, color 0.3s;
+            min-height: 100vh; 
+            overflow-x: hidden; 
+        }
+
+        body.dark-mode {
+            background-image: linear-gradient(rgba(16, 255, 0, 0.05) 1px, transparent 1px), 
+                              linear-gradient(90deg, rgba(16, 255, 0, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .footer { 
+            background-color: var(--bg-secondary);
+            border-top: 1px solid var(--border-color); 
+            margin-top: 2rem; 
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        .tab-button.active { 
+            color: var(--success-color); 
+            border-bottom: 3px solid var(--success-color); 
+            background: rgba(16, 255, 0, 0.1); 
+            font-weight: 700; 
+        }
+        
+        .tab-button { 
+            transition: all 0.2s ease-in-out; 
+            border-bottom: 3px solid transparent; 
+            color: var(--text-primary); 
+            flex: 1; 
+            min-width: 120px; 
+        }
+        
+        .tab-button:hover:not(.active) { 
+            background: var(--bg-accent); 
+        }
+        
+        .data-card { 
+            border-left: 4px solid var(--success-color); 
+            box-shadow: 0 4px 12px rgba(16, 255, 0, 0.2); 
+            background: var(--bg-secondary);
+            color: var(--text-primary); 
+            overflow-x: auto; 
+        }
+        
+        .error-card { 
+            border-left: 4px solid var(--error-color); 
+            background: var(--bg-accent); 
+        }
+        
+        .result-value { 
+            word-wrap: break-word; 
+            overflow-wrap: break-word; 
+            min-width: 0; 
+            text-align: left; 
+            font-size: 0.825rem; 
+            color: var(--text-primary); 
+            flex: 1; 
+        }
+        
+        .result-key { 
+            font-size: 0.825rem; 
+            color: var(--text-secondary); 
+            font-weight: 500; 
+            min-width: 120px; 
+        }
+        
+        .cors-notice { 
+            background: rgba(245, 158, 11, 0.1); 
+            border: 1px solid var(--warning-color); 
+            border-radius: 8px; 
+            padding: 12px; 
+            margin-bottom: 16px; 
+            font-size: 0.875rem; 
+            color: var(--warning-color); 
+        }
+        
+        .header-glow { 
+            background-color: var(--bg-secondary);
+            border-top: 4px solid var(--success-color);
+            box-shadow: 0 0 15px rgba(16, 255, 0, 0.5); 
+        }
+        
+        .input-field { 
+            background: var(--bg-accent);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            width: 100%; 
+            font-size: 16px; 
+        }
+        
+        .input-field::placeholder { 
+            color: var(--text-secondary); 
+        }
+        
+        .input-field:focus { 
+            box-shadow: 0 0 8px rgba(16, 255, 0, 0.5); 
+            outline: none; 
+        }
+        
+        .btn-primary { 
+            background: var(--success-color);
+            color: var(--bg-primary);
+            font-weight: bold; 
+            width: 100%; 
+        }
+        
+        .btn-primary:hover { 
+            background: #88FF88; 
+            box-shadow: 0 0 12px rgba(16, 255, 0, 0.7); 
+        }
+        
+        .auth-modal { 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            background: rgba(0, 0, 0, 0.85); 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            z-index: 1000; 
+            backdrop-filter: blur(5px); 
+            padding: 1rem; 
+            box-sizing: border-box; 
+        }
+        
+        .auth-content { 
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            border: 2px solid var(--success-color);
+            border-radius: 16px; 
+            padding: 1.5rem; 
+            max-width: 450px; 
+            width: 100%; 
+            max-height: 90vh; 
+            overflow-y: auto; 
+            box-shadow: 0 0 30px rgba(16, 255, 0, 0.3); 
+            text-align: center; 
+            animation: popIn 0.5s ease-out; 
+            position: relative; 
+            box-sizing: border-box; 
+        }
+        
+        @keyframes popIn { 
+            0% { transform: scale(0.8); opacity: 0; } 
+            100% { transform: scale(1); opacity: 1; } 
+        }
+        
+        .close-btn { 
+            position: absolute; 
+            top: 12px; 
+            right: 12px; 
+            background: rgba(255, 0, 0, 0.2); 
+            border: 1px solid #FF3333; 
+            color: #FF3333; 
+            width: 32px; 
+            height: 32px; 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            cursor: pointer; 
+            transition: all 0.3s ease; 
+            z-index: 10; 
+        }
+        
+        .close-btn:hover { 
+            background: rgba(255, 0, 0, 0.3); 
+            transform: scale(1.1); 
+        }
+        
+        .auth-title { 
+            color: var(--success-color);
+            font-size: 1.25rem; 
+            font-weight: 700; 
+            margin-bottom: 1rem; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: 0.5rem; 
+            padding-right: 30px; 
+        }
+        
+        .auth-tabs { 
+            display: flex; 
+            margin-bottom: 1.5rem; 
+            border-bottom: 1px solid var(--success-color);
+        }
+        
+        .auth-tab { 
+            flex: 1; 
+            padding: 12px; 
+            background: transparent; 
+            border: none; 
+            color: var(--text-secondary);
+            font-weight: 600; 
+            cursor: pointer; 
+            transition: all 0.3s ease; 
+        }
+        
+        .auth-tab.active { 
+            color: var(--success-color);
+            border-bottom: 3px solid var(--success-color);
+            background: rgba(16, 255, 0, 0.1);
+        }
+        
+        .auth-form { 
+            display: none; 
+        }
+        
+        .auth-form.active { 
+            display: block; 
+        }
+        
+        .form-group { 
+            margin-bottom: 1rem; 
+            text-align: left; 
+        }
+        
+        .form-label { 
+            display: block; 
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem; 
+            font-weight: 500; 
+        }
+        
+        .btn-auth { 
+            background: var(--success-color);
+            color: var(--bg-primary);
+            border: none; 
+            padding: 0.75rem 1rem; 
+            border-radius: 8px; 
+            font-weight: 700; 
+            cursor: pointer; 
+            transition: all 0.3s ease; 
+            width: 100%; 
+            margin-top: 1rem; 
+        }
+        
+        .btn-auth:hover { 
+            background: #88FF88; 
+            transform: translateY(-2px); 
+            box-shadow: 0 5px 15px rgba(16, 255, 0, 0.4); 
+        }
+        
+        .subscription-plans { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 1rem; 
+            margin: 1.5rem 0; 
+        }
+        
+        .plan-card { 
+            background: rgba(16, 255, 0, 0.1); 
+            border: 1px solid var(--success-color);
+            border-radius: 12px; 
+            padding: 1.5rem; 
+            cursor: pointer; 
+            transition: all 0.3s ease; 
+            text-align: center; 
+        }
+        
+        .plan-card:hover { 
+            background: rgba(16, 255, 0, 0.2); 
+            transform: translateY(-5px); 
+            box-shadow: 0 10px 20px rgba(16, 255, 0, 0.2); 
+        }
+        
+        .plan-card.active { 
+            background: rgba(16, 255, 0, 0.3); 
+            border-color: #88FF88; 
+            box-shadow: 0 0 20px rgba(16, 255, 0, 0.3); 
+        }
+        
+        .plan-name { 
+            color: var(--success-color);
+            font-size: 1.25rem; 
+            font-weight: 700; 
+            margin-bottom: 0.5rem; 
+        }
+        
+        .plan-price { 
+            color: var(--text-secondary);
+            font-size: 2rem; 
+            font-weight: 800; 
+            margin-bottom: 0.5rem; 
+        }
+        
+        .plan-duration { 
+            color: var(--text-secondary);
+            font-size: 0.9rem; 
+            margin-bottom: 1rem; 
+        }
+        
+        .plan-features { 
+            list-style: none; 
+            padding: 0; 
+            margin: 1rem 0; 
+            text-align: left; 
+        }
+        
+        .plan-features li { 
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem; 
+            font-size: 0.9rem; 
+            display: flex; 
+            align-items: center; 
+        }
+        
+        .plan-features li:before { 
+            content: "✓"; 
+            color: var(--success-color);
+            font-weight: bold; 
+            margin-right: 0.5rem; 
+        }
+        
+        .user-dashboard { 
+            position: fixed; 
+            top: 20px; 
+            right: 20px; 
+            z-index: 50; 
+        }
+        
+        .user-menu { 
+            background: var(--bg-secondary);
+            border: 1px solid var(--success-color);
+            border-radius: 8px; 
+            padding: 0.75rem 1rem; 
+            display: flex; 
+            align-items: center; 
+            gap: 0.75rem; 
+            cursor: pointer; 
+            transition: all 0.3s ease; 
+        }
+        
+        .user-menu:hover { 
+            background: rgba(16, 255, 0, 0.1); 
+            box-shadow: 0 0 10px rgba(16, 255, 0, 0.3); 
+        }
+        
+        .user-avatar { 
+            width: 32px; 
+            height: 32px; 
+            border-radius: 50%; 
+            background: var(--success-color);
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            color: var(--bg-primary);
+            font-weight: bold; 
+        }
+        
+        .user-name { 
+            color: var(--success-color);
+            font-weight: 600; 
+        }
+        
+        .user-dropdown { 
+            position: absolute; 
+            top: 100%; 
+            right: 0; 
+            background: var(--bg-secondary);
+            border: 1px solid var(--success-color);
+            border-radius: 8px; 
+            padding: 0.75rem; 
+            margin-top: 0.5rem; 
+            min-width: 200px; 
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); 
+            display: none; 
+        }
+        
+        .user-dropdown.active { 
+            display: block; 
+        }
+        
+        .user-dropdown-item { 
+            padding: 0.75rem; 
+            color: var(--text-secondary);
+            cursor: pointer; 
+            transition: all 0.3s ease; 
+            border-radius: 4px; 
+            display: flex; 
+            align-items: center; 
+            gap: 0.5rem; 
+        }
+        
+        .user-dropdown-item:hover { 
+            background: rgba(16, 255, 0, 0.1); 
+            color: var(--success-color);
+        }
+        
+        .subscription-status { 
+            padding: 0.75rem; 
+            border-bottom: 1px solid var(--success-color);
+            margin-bottom: 0.5rem; 
+        }
+        
+        .status-active { 
+            color: var(--success-color);
+            font-weight: 600; 
+        }
+        
+        .status-expired { 
+            color: var(--error-color);
+            font-weight: 600; 
+        }
+        
+        .status-trial { 
+            color: var(--warning-color);
+            font-weight: 600; 
+        }
+        
+        .payment-history { 
+            margin-top: 1.5rem; 
+        }
+        
+        .payment-item { 
+            background: rgba(16, 255, 0, 0.05); 
+            border: 1px solid var(--success-color);
+            border-radius: 8px; 
+            padding: 1rem; 
+            margin-bottom: 0.75rem; 
+        }
+        
+        .payment-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            margin-bottom: 0.5rem; 
+        }
+        
+        .payment-plan { 
+            color: var(--success-color);
+            font-weight: 600; 
+        }
+        
+        .payment-amount { 
+            color: var(--text-secondary);
+            font-weight: 600; 
+        }
+        
+        .payment-date { 
+            color: var(--text-secondary);
+            font-size: 0.8rem; 
+        }
+        
+        .payment-status { 
+            display: inline-block; 
+            padding: 0.25rem 0.5rem; 
+            border-radius: 4px; 
+            font-size: 0.75rem; 
+            font-weight: 600; 
+        }
+        
+        .status-success { 
+            background: rgba(16, 255, 0, 0.2); 
+            color: var(--success-color);
+        }
+        
+        .status-pending { 
+            background: rgba(255, 193, 7, 0.2); 
+            color: var(--warning-color);
+        }
+        
+        .lookup-history { 
+            margin-top: 1.5rem; 
+        }
+        
+        .lookup-item { 
+            background: rgba(16, 255, 0, 0.05); 
+            border: 1px solid var(--success-color);
+            border-radius: 8px; 
+            padding: 1rem; 
+            margin-bottom: 0.75rem; 
+        }
+        
+        .lookup-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            margin-bottom: 0.5rem; 
+        }
+        
+        .lookup-type { 
+            color: var(--success-color);
+            font-weight: 600; 
+        }
+        
+        .lookup-query { 
+            color: var(--text-secondary);
+            font-weight: 600; 
+        }
+        
+        .lookup-date { 
+            color: var(--text-secondary);
+            font-size: 0.8rem; 
+        }
+        
+        .lookup-result { 
+            color: var(--text-secondary);
+            font-size: 0.8rem; 
+            margin-top: 0.5rem; 
+            max-height: 100px; 
+            overflow-y: auto; 
+            padding: 0.5rem; 
+            background: var(--bg-accent);
+            border-radius: 4px; 
+        }
+        
+        .credit-display { 
+            background: rgba(16, 255, 0, 0.1); 
+            border: 1px solid var(--success-color);
+            border-radius: 8px; 
+            padding: 0.75rem 1rem; 
+            display: flex; 
+            align-items: center; 
+            gap: 0.5rem; 
+        }
+        
+        .credit-count { 
+            color: var(--success-color);
+            font-weight: 700; 
+            font-size: 1.1rem; 
+        }
+        
+        .credit-label { 
+            color: var(--text-secondary);
+            font-weight: 600; 
+        }
+        
+        .credit-plans { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+            gap: 1rem; 
+            margin: 1.5rem 0; 
+        }
+        
+        .credit-card { 
+            background: rgba(16, 255, 0, 0.1); 
+            border: 1px solid var(--success-color);
+            border-radius: 12px; 
+            padding: 1.5rem; 
+            cursor: pointer; 
+            transition: all 0.3s ease; 
+            text-align: center; 
+        }
+        
+        .credit-card:hover { 
+            background: rgba(16, 255, 0, 0.2); 
+            transform: translateY(-5px); 
+            box-shadow: 0 10px 20px rgba(16, 255, 0, 0.2); 
+        }
+        
+        .credit-card.active { 
+            background: rgba(16, 255, 0, 0.3); 
+            border-color: #88FF88; 
+            box-shadow: 0 0 20px rgba(16, 255, 0, 0.3); 
+        }
+        
+        .credit-name { 
+            color: var(--success-color);
+            font-size: 1.1rem; 
+            font-weight: 700; 
+            margin-bottom: 0.5rem; 
+        }
+        
+        .credit-price { 
+            color: var(--text-secondary);
+            font-size: 1.5rem; 
+            font-weight: 800; 
+            margin-bottom: 0.5rem; 
+        }
+        
+        .credit-amount { 
+            color: var(--success-color);
+            font-size: 1.75rem; 
+            font-weight: 800; 
+            margin-bottom: 0.5rem; 
+        }
+        
+        .credit-duration { 
+            color: var(--text-secondary);
+            font-size: 0.9rem; 
+            margin-bottom: 1rem; 
+        }
+        
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: var(--bg-accent);
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(16, 255, 0, 0.3);
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--success-color);
+            color: var(--bg-primary);
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(16, 255, 0, 0.3);
+            transition: all 0.3s ease;
+            z-index: 100;
+            text-decoration: none;
+        }
+        
+        .whatsapp-float:hover {
+            background: #88FF88;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 20px rgba(16, 255, 0, 0.5);
+        }
+        
+        .notification {
+            animation: slideIn 0.3s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @media (max-width: 640px) {
+            .theme-toggle {
+                top: 10px;
+                left: 10px;
+                width: 40px;
+                height: 40px;
+            }
+            .whatsapp-float {
+                bottom: 15px;
+                right: 15px;
+                width: 50px;
+                height: 50px;
+            }
+            .container-padding { padding: 12px; } 
+            .header-text { font-size: 1.5rem; } 
+            .tab-button { padding: 12px 8px; font-size: 0.8rem; } 
+            .input-container { flex-direction: column; gap: 12px; } 
+            .btn-primary { padding: 14px; font-size: 1rem; } 
+            .result-row { flex-direction: column; align-items: flex-start; gap: 4px; padding: 10px 0; } 
+            .result-key { min-width: auto; font-weight: 600; } 
+            .result-value { text-align: left; width: 100%; } 
+            .footer-content { flex-direction: column; gap: 16px; } 
+            .footer-links { flex-direction: column; gap: 12px; } 
+            .auth-modal { padding: 0.5rem; } 
+            .auth-content { padding: 1.25rem; max-height: 95vh; } 
+            .auth-title { font-size: 1.1rem; padding-right: 25px; } 
+            .subscription-plans { grid-template-columns: 1fr; } 
+            .user-dashboard { top: 10px; right: 10px; } 
+            .user-menu { padding: 0.5rem 0.75rem; } 
+            .user-name { display: none; } 
+            .credit-plans { grid-template-columns: 1fr; } 
+        }
+        
+        @media (min-width: 641px) and (max-width: 1024px) { 
+            .container-padding { padding: 16px; } 
+            .input-container { gap: 16px; } 
+            .btn-primary { width: auto; min-width: 140px; } 
+            .auth-content { max-width: 400px; } 
+        }
+        
+        button, .tab-button, .btn-primary { 
+            -webkit-tap-highlight-color: transparent; 
+            touch-action: manipulation; 
+        }
+        
+        .tab-content { 
+            -webkit-overflow-scrolling: touch; 
+        }
+        
+        .loader { 
+            border-top-color: var(--success-color);
+            border-bottom-color: transparent; 
+            border-left-color: transparent; 
+            border-right-color: transparent; 
+        }
+        
+        button:focus, .input-field:focus { 
+            outline: 2px solid var(--success-color);
+            outline-offset: 2px; 
+        }
+        
+        .auth-modal { 
+            cursor: pointer; 
+        }
+        
+        .auth-content { 
+            cursor: default; 
+        }
+        
+        .subscription-countdown { 
+            margin-top: 4px; 
+        }
+        
+        .countdown-bar { 
+            background: rgba(16, 255, 0, 0.1); 
+            border-radius: 2px; 
+            height: 4px; 
+            overflow: hidden; 
+        }
+        
+        .countdown-progress { 
+            background: var(--success-color);
+            height: 100%; 
+            transition: width 0.3s; 
+        }
+        
+        .countdown-text { 
+            font-size: 0.75rem; 
+        }
+        
+        .countdown-warning .countdown-progress { 
+            background: var(--warning-color);
+        }
+        
+        .countdown-warning .countdown-text { 
+            color: var(--warning-color);
+        }
+        
+        .countdown-normal .countdown-progress { 
+            background: var(--success-color);
+        }
+        
+        .countdown-normal .countdown-text { 
+            color: var(--text-secondary);
+        }
+        
+        .popup-error { 
+            position: fixed; 
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%); 
+            background: var(--bg-accent);
+            border: 2px solid var(--error-color);
+            border-radius: 12px; 
+            padding: 1.5rem; 
+            z-index: 3000; 
+            max-width: 400px; 
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); 
+        }
+        
+        .popup-error h3 { 
+            color: var(--error-color);
+            font-weight: 700; 
+            margin-bottom: 0.5rem; 
+        }
+        
+        .popup-error p { 
+            color: var(--error-color);
+            margin-bottom: 1rem; 
+        }
+        
+        .popup-error button { 
+            background: var(--error-color);
+            color: white; 
+            padding: 0.5rem 1rem; 
+            border-radius: 6px; 
+        }
+        
+        .activation-success { 
+            background: rgba(16, 255, 0, 0.2); 
+            border: 1px solid var(--success-color);
+            border-radius: 8px; 
+            padding: 1rem; 
+            margin: 1rem 0; 
+        }
+        
+        #popupErrorModal {
+            z-index: 3000 !important;
+        }
+        
+        #subscriptionModal {
+            z-index: 2000 !important;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+<!-- Theme Toggle Button -->
+<button class="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode" aria-label="Toggle theme">
+    <span data-lucide="sun" class="w-6 h-6 hidden" id="lightIcon"></span>
+    <span data-lucide="moon" class="w-6 h-6" id="darkIcon"></span>
+</button>
+
+<!-- ✅ FIXED: Broadcast Message Display - Added defined() checks -->
+<div id="broadcastMessage" class="fixed top-0 left-0 right-0 bg-yellow-600 text-black p-3 text-center z-50 font-semibold flex items-center justify-center">
+    <span data-lucide="megaphone" class="w-5 h-5 mr-2 flex-shrink-0"></span>
+    <span class="flex-1">🚫We will be discontinuing free credits soon.🛑 </span>
+    <button onclick="document.getElementById('broadcastMessage').remove()" class="ml-4 text-black hover:text-gray-700 font-bold" aria-label="Close broadcast message">✕</button>
+</div>
+<style>
+    body { padding-top: 60px; }
+</style>
+
+<!-- Auth Modal -->
+<div id="authModal" class="auth-modal" style="display: none;" onclick="closeAuthModalOnBackdrop(event)" role="dialog" aria-modal="true">
+    <div class="auth-content" onclick="event.stopPropagation()">
+        <button class="close-btn" onclick="closeAuthModal()" aria-label="Close modal">
+            <span data-lucide="x" class="w-4 h-4"></span>
+        </button>
+        
+        <h2 class="auth-title">
+            <span data-lucide="shield" class="w-5 h-5"></span>
+            DarkOSINT Access
+        </h2>
+        
+        <div class="auth-tabs">
+            <button class="auth-tab active" onclick="showAuthForm('login')">Login</button>
+            <button class="auth-tab" onclick="showAuthForm('signup')">Sign Up</button>
+        </div>
+        
+        <!-- Login Form -->
+        <div id="loginForm" class="auth-form active">
+            <div class="form-group">
+                <label class="form-label" for="loginEmail">Email Address</label>
+                <input type="email" id="loginEmail" class="input-field p-3 rounded-lg" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" class="input-field p-3 rounded-lg" placeholder="Enter your password" required>
+            </div>
+            <button class="btn-auth" onclick="login()">
+                <span data-lucide="log-in" class="w-4 h-4 mr-1"></span>
+                Login
+            </button>
+        </div>
+        
+        <!-- Signup Form -->
+        <div id="signupForm" class="auth-form">
+            <div class="form-group">
+                <label class="form-label" for="signupName">Full Name</label>
+                <input type="text" id="signupName" class="input-field p-3 rounded-lg" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="signupEmail">Email Address</label>
+                <input type="email" id="signupEmail" class="input-field p-3 rounded-lg" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="signupPassword">Password</label>
+                <input type="password" id="signupPassword" class="input-field p-3 rounded-lg" placeholder="Create a password (min. 6 characters)" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="signupConfirmPassword">Confirm Password</label>
+                <input type="password" id="signupConfirmPassword" class="input-field p-3 rounded-lg" placeholder="Confirm your password" required>
+            </div>
+            <button class="btn-auth" onclick="signup()">
+                <span data-lucide="user-plus" class="w-4 h-4 mr-1"></span>
+                Create Account
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Popup Error Modal -->
+<div id="popupErrorModal" class="fixed inset-0 bg-black bg-opacity-75 hidden flex items-center justify-center z-2000" role="dialog" aria-modal="true">
+    <div class="popup-error">
+        <h3 class="flex items-center gap-2">
+            <span data-lucide="alert-circle" class="w-5 h-5"></span>
+            <span id="popupErrorTitle">Error</span>
+        </h3>
+        <p id="popupErrorMessage"></p>
+        <button onclick="closePopupError()" class="w-full">OK</button>
+    </div>
+</div>
+
+<!-- Subscription Modal -->
+<div id="subscriptionModal" class="auth-modal" style="display: none;" onclick="closeSubscriptionModalOnBackdrop(event)" role="dialog" aria-modal="true">
+    <div class="auth-content" onclick="event.stopPropagation()">
+        <button class="close-btn" onclick="closeSubscriptionModal()" aria-label="Close subscription modal">
+            <span data-lucide="x" class="w-4 h-4"></span>
+        </button>
+        
+        <h2 class="auth-title">
+            <span data-lucide="crown" class="w-5 h-5"></span>
+            Choose Your Plan
+        </h2>
+        
+        <p class="text-green-300 text-sm mb-4">Select a subscription plan to access DarkOSINT verification services</p>
+        
+        <div class="activation-success" id="activationMessage" style="display: none;">
+            <p class="text-green-400 font-semibold flex items-center gap-2">
+                <span data-lucide="check-circle" class="w-5 h-5"></span>
+                <span id="activationText"></span>
+            </p>
+        </div>
+        
+        <div class="credit-plans">
+            <div class="credit-card" onclick="selectCreditPlan('basic20')">
+                <h3 class="credit-name">Basic Pack</h3>
+                <div class="credit-amount">20 Credits</div>
+                <div class="credit-price">₹50</div>
+                <div class="credit-duration">One-time purchase</div>
+                <button class="btn-auth" onclick="event.stopPropagation(); initiatePayment('basic20')">Buy Now</button>
+            </div>
+            
+            <div class="credit-card active" onclick="selectCreditPlan('basic50')">
+                <h3 class="credit-name">Standard Pack</h3>
+                <div class="credit-amount">50 Credits</div>
+                <div class="credit-price">₹119</div>
+                <div class="credit-duration">One-time purchase</div>
+                <button class="btn-auth" onclick="event.stopPropagation(); initiatePayment('basic50')">Buy Now</button>
+            </div>
+        </div>
+        
+        <div class="subscription-plans">
+            <div class="plan-card" onclick="selectPlan('premium15')">
+                <h3 class="plan-name">Premium 15 Days</h3>
+                <div class="plan-price">₹299</div>
+                <div class="plan-duration">15 Days Unlimited Access</div>
+                <ul class="plan-features">
+                    <li>Unlimited Aadhaar Verifications</li>
+                    <li>Unlimited Mobile Lookups</li>
+                    <li>Unlimited Family Details</li>
+                    <li>Priority Support</li>
+                </ul>
+                <button class="btn-auth" onclick="event.stopPropagation(); initiatePayment('premium15')">Select Plan</button>
+            </div>
+            
+            <div class="plan-card active" onclick="selectPlan('premium30')">
+                <h3 class="plan-name">Premium 30 Days</h3>
+                <div class="plan-price">₹500</div>
+                <div class="plan-duration">30 Days Unlimited Access</div>
+                <ul class="plan-features">
+                    <li>Unlimited Aadhaar Verifications</li>
+                    <li>Unlimited Mobile Lookups</li>
+                    <li>Unlimited Family Details</li>
+                    <li>Priority Support</li>
+                    <li>Best Value</li>
+                </ul>
+                <button class="btn-auth" onclick="event.stopPropagation(); initiatePayment('premium30')">Select Plan</button>
+            </div>
+        </div>
+        
+        <div class="mt-4 text-center">
+            <p class="text-green-300 text-sm">After payment, your credits or subscription will be activated immediately</p>
+        </div>
+    </div>
+</div>
+
+<!-- Payment History Modal -->
+<div id="paymentHistoryModal" class="auth-modal" style="display: none;" onclick="closePaymentHistoryModalOnBackdrop(event)" role="dialog" aria-modal="true">
+    <div class="auth-content" onclick="event.stopPropagation()">
+        <button class="close-btn" onclick="closePaymentHistoryModal()" aria-label="Close payment history">
+            <span data-lucide="x" class="w-4 h-4"></span>
+        </button>
+        
+        <h2 class="auth-title">
+            <span data-lucide="credit-card" class="w-5 h-5"></span>
+            Payment History
+        </h2>
+        
+        <div class="payment-history" id="paymentHistoryList"></div>
+        
+        <button class="btn-auth mt-4" onclick="closePaymentHistoryModal()">Close</button>
+    </div>
+</div>
+
+<!-- Lookup History Modal -->
+<div id="lookupHistoryModal" class="auth-modal" style="display: none;" onclick="closeLookupHistoryModalOnBackdrop(event)" role="dialog" aria-modal="true">
+    <div class="auth-content" onclick="event.stopPropagation()">
+        <button class="close-btn" onclick="closeLookupHistoryModal()" aria-label="Close lookup history">
+            <span data-lucide="x" class="w-4 h-4"></span>
+        </button>
+        
+        <h2 class="auth-title">
+            <span data-lucide="search" class="w-5 h-5"></span>
+            Lookup History
+        </h2>
+        
+        <div class="lookup-history" id="lookupHistoryList"></div>
+        
+        <button class="btn-auth mt-4" onclick="closeLookupHistoryModal()">Close</button>
+    </div>
+</div>
+
+<div class="max-w-4xl mx-auto container-padding flex-grow w-full">
+    <!-- User Dashboard -->
+    <div class="user-dashboard" id="userDashboard" style="display: none;">
+        <div class="user-menu" onclick="toggleUserDropdown()" aria-haspopup="true" aria-expanded="false">
+            <div class="user-avatar" id="userAvatar">U</div>
+            <div class="user-name" id="userName">User</div>
+            <span data-lucide="chevron-down" class="w-4 h-4 text-green-400"></span>
+        </div>
+        
+        <div class="user-dropdown" id="userDropdown" role="menu">
+            <div class="subscription-status">
+                <div>Credits: <span id="creditCount" class="status-active">0</span></div>
+                <div>Subscription: <span id="subscriptionStatus" class="status-trial">Free</span></div>
+                <div id="subscriptionCountdown"></div>
+            </div>
+            <div class="user-dropdown-item" onclick="showSubscriptionModal()" role="menuitem">
+                <span data-lucide="crown" class="w-4 h-4"></span>
+                Buy Credits/Plan
+            </div>
+            <div class="user-dropdown-item" onclick="showPaymentHistory()" role="menuitem">
+                <span data-lucide="credit-card" class="w-4 h-4"></span>
+                Payment History
+            </div>
+            <div class="user-dropdown-item" onclick="showLookupHistory()" role="menuitem">
+                <span data-lucide="search" class="w-4 h-4"></span>
+                Lookup History
+            </div>
+            <div class="user-dropdown-item" onclick="logout()" role="menuitem">
+                <span data-lucide="log-out" class="w-4 h-4"></span>
+                Logout
+            </div>
+        </div>
+    </div>
+
+    <header class="mb-4 md:mb-6 p-4 bg-gray-100 rounded-xl sticky top-0 z-10" style="background-color: var(--bg-secondary);" role="banner">
+        <h1 class="header-text font-extrabold flex justify-center items-center" style="color: var(--success-color);">
+            <span data-lucide="shield-check" class="w-6 h-6 mr-2"></span>
+            DARKOSINT TOOL
+        </h1>
+        <p class="text-sm mt-1 text-center" style="color: var(--text-secondary);">Secure Verification Platform - Accessing Data Stream</p>
+    </header>
+
+    <div id="creditDisplay" class="credit-display" style="display: none;">
+        <span data-lucide="coins" class="w-5 h-5"></span>
+        <span class="credit-label">Available Credits:</span>
+        <span class="credit-count" id="availableCredits">0</span>
+        <button class="ml-auto font-semibold py-1 px-3 rounded text-sm" onclick="showSubscriptionModal()" style="background: var(--success-color); color: var(--bg-primary);">
+            Buy More
+        </button>
+    </div>
+
+    <div class="rounded-xl shadow-lg overflow-hidden mb-4 md:mb-6 border" style="background-color: var(--bg-secondary); border-color: var(--border-color);" id="tabContainer">
+        <nav class="flex justify-between items-center border-b overflow-x-auto tab-content" style="border-color: var(--border-color);" role="tablist">
+            <button class="tab-button flex items-center justify-center space-x-1 p-3 text-sm font-medium hover:bg-gray-900 active" onclick="showTab('aadhaar')" role="tab" aria-selected="true" aria-controls="aadhaar" id="aadhaar-tab">
+                <span data-lucide='credit-card' class='w-4 h-4'></span>
+                <span>Aadhaar</span>
+            </button>
+            <button class="tab-button flex items-center justify-center space-x-1 p-3 text-sm font-medium hover:bg-gray-900" onclick="showTab('mobile')" role="tab" aria-selected="false" aria-controls="mobile" id="mobile-tab">
+                <span data-lucide='phone' class='w-4 h-4'></span>
+                <span>Mobile</span>
+            </button>
+            <button class="tab-button flex items-center justify-center space-x-1 p-3 text-sm font-medium hover:bg-gray-900" onclick="showTab('family')" role="tab" aria-selected="false" aria-controls="family" id="family-tab">
+                <span data-lucide='users' class='w-4 h-4'></span>
+                <span>Family Info</span>
+            </button>
+        </nav>
+    </div>
+
+    <main class="p-4 md:p-6 rounded-xl shadow-lg border" id="mainContent" style="display: none; background-color: var(--bg-secondary); border-color: var(--border-color);">
+
+        <!-- Aadhaar Tab -->
+        <section id="aadhaar" class="tab-pane" role="tabpanel" aria-labelledby="aadhaar-tab">
+            <div class="cors-notice flex items-start">
+                <span data-lucide="alert-triangle" class="w-5 h-5 mr-2 mt-0.5 flex-shrink-0"></span>
+                <div>
+                    <strong>SECURITY NOTICE:</strong> 
+                    <span>Using encrypted proxy to bypass restrictions. If lookup fails, try refreshing the connection.</span>
+                </div>
+            </div>
+            <h2 class="text-lg md:text-xl font-bold mb-4 flex items-center">
+                <span data-lucide="credit-card" class="w-5 h-5 mr-2"></span>
+                Aadhaar Verification
+            </h2>
+            <div class="input-container flex flex-col md:flex-row gap-3">
+                <input type="number" id="aadhaar-input" placeholder="Enter 12-digit Aadhaar Number" class="input-field flex-1 p-3 rounded-lg transition shadow-sm" aria-label="Aadhaar number input">
+                <button onclick="lookup('aadhaar')" class="btn-primary flex items-center justify-center p-3 rounded-lg font-semibold transition shadow-md md:w-36">
+                    <span data-lucide='search' class='w-4 h-4 mr-2'></span>Lookup
+                </button>
+            </div>
+            <div id="aadhaar-result" class="mt-4 md:mt-6"></div>
+        </section>
+
+        <!-- Mobile Tab -->
+        <section id="mobile" class="tab-pane hidden" role="tabpanel" aria-labelledby="mobile-tab">
+            <div class="cors-notice flex items-start">
+                <span data-lucide="alert-triangle" class="w-5 h-5 mr-2 mt-0.5 flex-shrink-0"></span>
+                <div>
+                    <strong>SECURITY NOTICE:</strong> 
+                    <span>Using encrypted proxy to bypass restrictions. If lookup fails, try refreshing the connection.</span>
+                </div>
+            </div>
+            <h2 class="text-lg md:text-xl font-bold mb-4 flex items-center">
+                <span data-lucide="phone" class="w-5 h-5 mr-2"></span>
+                Mobile Lookup
+            </h2>
+            <div class="input-container flex flex-col md:flex-row gap-3">
+                <input type="number" id="mobile-input" placeholder="Enter 10-digit Mobile Number" class="input-field flex-1 p-3 rounded-lg transition shadow-sm" aria-label="Mobile number input">
+                <button onclick="lookup('mobile')" class="btn-primary flex items-center justify-center p-3 rounded-lg font-semibold transition shadow-md md:w-36">
+                    <span data-lucide='search' class='w-4 h-4 mr-2'></span>Lookup
+                </button>
+            </div>
+            <div id="mobile-result" class="mt-4 md:mt-6"></div>
+        </section>
+
+        <!-- Family Details Tab -->
+        <section id="family" class="tab-pane hidden" role="tabpanel" aria-labelledby="family-tab">
+            <div class="cors-notice flex items-start">
+                <span data-lucide="alert-triangle" class="w-5 h-5 mr-2 mt-0.5 flex-shrink-0"></span>
+                <div>
+                    <strong>SECURITY NOTICE:</strong> 
+                    <span>Using encrypted proxy to bypass restrictions. If lookup fails, try refreshing the connection.</span>
+                </div>
+            </div>
+            <h2 class="text-lg md:text-xl font-bold mb-4 flex items-center">
+                <span data-lucide="users" class="w-5 h-5 mr-2"></span>
+                Family Details Lookup
+            </h2>
+            <div class="input-container flex flex-col md:flex-row gap-3">
+                <input type="number" id="family-input" placeholder="Enter 12-digit Aadhaar Number" class="input-field flex-1 p-3 rounded-lg transition shadow-sm" aria-label="Family Aadhaar number input">
+                <button onclick="lookup('family')" class="btn-primary flex items-center justify-center p-3 rounded-lg font-semibold transition shadow-md md:w-36">
+                    <span data-lucide='search' class='w-4 h-4 mr-2'></span>Lookup
+                </button>
+            </div>
+            <div id="family-result" class="mt-4 md:mt-6"></div>
+        </section>
+
+    </main>
+
+    <!-- Guest Content -->
+    <section class="p-8 rounded-xl shadow-lg border text-center" style="background-color: var(--bg-secondary); border-color: var(--border-color);" id="guestContent">
+        <div class="max-w-md mx-auto">
+            <span data-lucide="shield" class="w-16 h-16 mx-auto mb-4" style="color: var(--success-color);"></span>
+            <h2 class="text-2xl font-bold mb-4" style="color: var(--success-color);">Welcome to DarkOSINT</h2>
+            <p class="mb-6" style="color: var(--text-secondary);">Access our powerful verification tools with credits or subscription plans. Create an account or login to get started.</p>
+            <div class="flex flex-col gap-4">
+                <button class="btn-primary p-4 rounded-lg font-semibold" onclick="showAuthModal()">
+                    <span data-lucide="log-in" class="w-5 h-5 mr-2"></span>
+                    Login / Sign Up
+                </button>
+                <p class="text-sm" style="color: var(--text-accent);">New users get 5 free credits to try our services</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer class="footer p-4 md:p-6 text-center mt-auto" role="contentinfo">
+    <div class="max-w-4xl mx-auto">
+        <h3 class="text-lg font-bold mb-2" style="color: var(--success-color);">DarkOSINT</h3>
+        <p class="text-sm mb-4" style="color: var(--text-secondary);">A comprehensive verification platform that provides fast and secure lookups for various types of information.</p>
+        
+        <nav class="footer-content flex flex-col md:flex-row justify-center items-center gap-4 mb-4" aria-label="Footer navigation">
+            <div class="footer-links flex flex-col md:flex-row justify-center items-center gap-4">
+                <a href="/cdn-cgi/l/email-protection#5d34333b321d193c2f36120e141309733e3230" class="text-sm hover:text-green-400 flex items-center" style="color: var(--text-secondary);">
+                    <span data-lucide="mail" class="w-4 h-4 mr-2"></span>
+                    <span class="__cf_email__" data-cfemail="7910171f16393d180b12362a30372d571a1614">[email&#160;protected]</span>
+                </a>
+                <a href="https://t.me/gauravzack" class="text-sm hover:text-green-400 flex items-center" style="color: var(--text-secondary);" rel="noopener noreferrer nofollow">
+                    <span data-lucide="send" class="w-4 h-4 mr-2"></span>
+                    @gauravzack
+                </a>
+                <a href="https://t.me/DarkOSINT_Tools" class="text-sm hover:text-green-400 flex items-center" style="color: var(--text-secondary);" rel="noopener noreferrer nofollow">
+                    <span data-lucide="message-circle" class="w-4 h-4 mr-2"></span>
+                Telegram Support
+                </a>
+            </div>
+        </nav>
+        
+        <div class="border-t pt-4" style="border-color: var(--border-color);">
+            <p class="text-xs" style="color: var(--text-accent);">
+                © 2025 DarkOSINT. All rights reserved. This tool is for authorized verification purposes only. 
+                <a href="/privacy-policy" class="underline" style="color: var(--text-accent);"></a> | 
+                <a href="/terms" class="underline" style="color: var(--text-accent);"></a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://t.me/gauravzack?text=Hello%20DarkOSINT%20" 
+   target="_blank" 
+   class="whatsapp-float"
+   title="Join WhatsApp Support Group"
+   rel="noopener noreferrer nofollow">
+    <span data-lucide="message-circle" class="w-6 h-6"></span>
+</a>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    // === GLOBAL FUNCTIONS ===
+    function showPopupError(title, message) {
+        document.getElementById('popupErrorTitle').textContent = title;
+        document.getElementById('popupErrorMessage').textContent = message;
+        document.getElementById('popupErrorModal').classList.remove('hidden');
+    }
+
+    function closePopupError() {
+        document.getElementById('popupErrorModal').classList.add('hidden');
+    }
+
+    function showAuthModal() {
+        document.getElementById('authModal').style.display = 'flex';
+    }
+    
+    function closeAuthModal() {
+        document.getElementById('authModal').style.display = 'none';
+    }
+    
+    function closeAuthModalOnBackdrop(event) {
+        if (event.target.id === 'authModal') {
+            closeAuthModal();
+        }
+    }
+    
+    function showSubscriptionModal() {
+        document.getElementById('subscriptionModal').style.display = 'flex';
+        document.getElementById('activationMessage').style.display = 'none';
+    }
+    
+    function closeSubscriptionModal() {
+        document.getElementById('subscriptionModal').style.display = 'none';
+        document.getElementById('activationMessage').style.display = 'none';
+    }
+    
+    function closeSubscriptionModalOnBackdrop(event) {
+        if (event.target.id === 'subscriptionModal') {
+            closeSubscriptionModal();
+        }
+    }
+    
+    function closePaymentHistoryModal() {
+        document.getElementById('paymentHistoryModal').style.display = 'none';
+    }
+    
+    function closePaymentHistoryModalOnBackdrop(event) {
+        if (event.target.id === 'paymentHistoryModal') {
+            closePaymentHistoryModal();
+        }
+    }
+    
+    function closeLookupHistoryModal() {
+        document.getElementById('lookupHistoryModal').style.display = 'none';
+    }
+    
+    function closeLookupHistoryModalOnBackdrop(event) {
+        if (event.target.id === 'lookupHistoryModal') {
+            closeLookupHistoryModal();
+        }
+    }
+    
+    function showAuthForm(formType) {
+        document.querySelectorAll('.auth-tab').forEach(tab => tab.classList.remove('active'));
+        document.querySelectorAll('.auth-form').forEach(form => form.classList.remove('active'));
+        
+        if (formType === 'login') {
+            document.querySelectorAll('.auth-tab')[0].classList.add('active');
+            document.getElementById('loginForm').classList.add('active');
+        } else {
+            document.querySelectorAll('.auth-tab')[1].classList.add('active');
+            document.getElementById('signupForm').classList.add('active');
+        }
+    }
+    
+    function selectPlan(plan) {
+        selectedPlan = plan;
+        document.querySelectorAll('.plan-card').forEach(card => card.classList.remove('active'));
+        event.currentTarget.classList.add('active');
+    }
+    
+    function selectCreditPlan(plan) {
+        selectedCreditPlan = plan;
+        document.querySelectorAll('.credit-card').forEach(card => card.classList.remove('active'));
+        event.currentTarget.classList.add('active');
+    }
+    
+    function toggleUserDropdown() {
+        document.getElementById('userDropdown').classList.toggle('active');
+        const menu = document.querySelector('.user-menu');
+        menu.setAttribute('aria-expanded', document.getElementById('userDropdown').classList.contains('active'));
+    }
+    
+    function showTab(tabName) {
+        document.querySelectorAll('.tab-pane').forEach(tab => tab.classList.add('hidden'));
+        document.querySelectorAll('.tab-button').forEach(button => button.classList.remove('active'));
+        
+        document.getElementById(tabName).classList.remove('hidden');
+        event.currentTarget.classList.add('active');
+        currentTab = tabName;
+    }
+
+    // === APPLICATION CODE ===
+    document.addEventListener('DOMContentLoaded', function() {
+        // Defer Lucide icons for performance
+        setTimeout(() => {
+            lucide.createIcons();
+        }, 100);
+        
+        initTheme();
+        checkAuthStatus();
+        showTab('aadhaar');
+        setInterval(updateSubscriptionCountdown, 60000);
+    });
+
+    let currentUser = null;
+    let selectedPlan = 'premium30';
+    let selectedCreditPlan = 'basic50';
+    let currentTab = 'aadhaar';
+
+    const PLANS = {
+        basic20: { name: 'Basic Pack (20 Credits)', amount: 5000, credits: 20 },
+        basic50: { name: 'Standard Pack (50 Credits)', amount: 11900, credits: 50 },
+        premium15: { name: 'Premium 15 Days', amount: 29900, duration: 15 },
+        premium30: { name: 'Premium 30 Days', amount: 50000, duration: 30 }
+    };
+
+    // THEME TOGGLE FUNCTIONS
+    function initTheme() {
+        const savedTheme = localStorage.getItem('darkosint-theme');
+        const isDarkMode = savedTheme === 'dark';
+        
+        if (isDarkMode) {
+            document.body.classList.add('dark-mode');
+            document.getElementById('lightIcon').classList.remove('hidden');
+            document.getElementById('darkIcon').classList.add('hidden');
+        } else {
+            document.body.classList.remove('dark-mode');
+            document.getElementById('lightIcon').classList.add('hidden');
+            document.getElementById('darkIcon').classList.remove('hidden');
+        }
+    }
+
+    function toggleTheme() {
+        const isDarkMode = document.body.classList.contains('dark-mode');
+        
+        if (isDarkMode) {
+            document.body.classList.remove('dark-mode');
+            localStorage.setItem('darkosint-theme', 'light');
+            document.getElementById('lightIcon').classList.add('hidden');
+            document.getElementById('darkIcon').classList.remove('hidden');
+        } else {
+            document.body.classList.add('dark-mode');
+            localStorage.setItem('darkosint-theme', 'dark');
+            document.getElementById('lightIcon').classList.remove('hidden');
+            document.getElementById('darkIcon').classList.add('hidden');
+        }
+    }
+
+    // Authentication Functions
+    async function checkAuthStatus() {
+        try {
+            const res = await fetch('api/auth.php', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                body: 'action=check'
+            });
+            const data = await res.json();
+            
+            if (data.authenticated) {
+                currentUser = data.user;
+                updateUIForUser();
+                checkUserSubscription();
+            } else {
+                showGuestContent();
+            }
+        } catch (error) {
+            console.error('Auth check failed:', error);
+            showGuestContent();
+        }
+    }
+
+    async function login() {
+        const email = document.getElementById('loginEmail').value;
+        const password = document.getElementById('loginPassword').value;
+        
+        if (!email || !password) {
+            showPopupError('Login Failed', 'Please fill in all fields');
+            return;
+        }
+        
+        try {
+            const res = await fetch('api/auth.php', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                body: `action=login&email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`
+            });
+            
+            const data = await res.json();
+            
+            if (data.success) {
+                currentUser = data.user;
+                closeAuthModal();
+                updateUIForUser();
+                showNotification('Login successful!', 'success');
+                checkUserSubscription();
+            } else {
+                closeAuthModal();
+                setTimeout(() => {
+                    showPopupError('Login Failed', data.message);
+                }, 100);
+            }
+        } catch (error) {
+            closeAuthModal();
+            setTimeout(() => {
+                showPopupError('Login Error', 'Login failed. Please try again.');
+            }, 100);
+        }
+    }
+
+    async function signup() {
+    const name = document.getElementById('signupName').value;
+    const email = document.getElementById('signupEmail').value;
+    const password = document.getElementById('signupPassword').value;
+    const confirmPassword = document.getElementById('signupConfirmPassword').value;
+    
+    if (!name || !email || !password || !confirmPassword) {
+        showPopupError('Signup Failed', 'Please fill in all fields');
+        return;
+    }
+    
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        showPopupError('Signup Failed', 'Please enter a valid email address (e.g., user@example.com)');
+        return;
+    }
+    
+    if (password !== confirmPassword) {
+        showPopupError('Signup Failed', 'Passwords do not match');
+        return;
+    }
+    
+    if (password.length < 6) {
+        showPopupError('Signup Failed', 'Password must be at least 6 characters');
+        return;
+    }
+    
+    try {
+        const res = await fetch('api/auth.php', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            body: `action=signup&name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`
+        });
+        
+        const data = await res.json();
+        
+        if (data.success) {
+            currentUser = data.user;
+            closeAuthModal();
+            updateUIForUser();
+            showNotification('Account created successfully!', 'success');
+            checkUserSubscription();
+        } else {
+            closeAuthModal();
+            setTimeout(() => {
+                showPopupError('Signup Failed', data.message);
+            }, 100);
+        }
+    } catch (error) {
+        closeAuthModal();
+        setTimeout(() => {
+            showPopupError('Signup Error', 'Signup failed. Please try again.');
+        }, 100);
+    }
+}
+
+    async function logout() {
+        try {
+            await fetch('api/auth.php', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                body: 'action=logout'
+            });
+            location.reload();
+        } catch (error) {
+            location.reload();
+        }
+    }
+
+    function updateUIForUser() {
+        document.getElementById('guestContent').style.display = 'none';
+        document.getElementById('mainContent').style.display = 'block';
+        document.getElementById('userDashboard').style.display = 'block';
+        document.getElementById('creditDisplay').style.display = 'flex';
+        
+        document.getElementById('userName').textContent = currentUser.name;
+        document.getElementById('userAvatar').textContent = currentUser.name.charAt(0).toUpperCase();
+        updateCreditDisplay();
+        updateSubscriptionStatus();
+    }
+
+    function showGuestContent() {
+        document.getElementById('guestContent').style.display = 'block';
+        document.getElementById('mainContent').style.display = 'none';
+        document.getElementById('userDashboard').style.display = 'none';
+        document.getElementById('creditDisplay').style.display = 'none';
+    }
+
+    // Credit System Functions
+    async function updateCreditDisplay() {
+        if (!currentUser) return;
+        
+        try {
+            const res = await fetch('api/credits.php?action=get');
+            const data = await res.json();
+            document.getElementById('availableCredits').textContent = data.credits;
+            document.getElementById('creditCount').textContent = data.credits;
+        } catch (error) {
+            console.error('Failed to update credits:', error);
+        }
+    }
+
+    // Subscription Functions - UPDATED PAYMENT FLOW
+    async function initiatePayment(planType) {
+        const planDetails = PLANS[planType];
+        
+        if (!planDetails) {
+            showPopupError('Invalid Plan', 'Selected plan is invalid.');
+            return;
+        }
+
+        try {
+            // Step 1: Create Razorpay Order
+            const res = await fetch('api/subscription.php', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                body: `action=create_order&plan=${planType}`
+            });
+            
+            const orderData = await res.json();
+            
+            if (!orderData.success) {
+                showPopupError('Order Failed', orderData.message || 'Failed to create payment order');
+                return;
+            }
+
+            // Step 2: Open Razorpay Checkout
+            const options = {
+                key: '',
+                amount: orderData.amount,
+                currency: 'INR',
+                name: 'DarkOSINT',
+                description: orderData.name,
+                order_id: orderData.order_id, // ✅ CRITICAL: This fixes pending payments
+                handler: function(response) {
+                    // Step 3: Verify Payment
+                    handlePaymentSuccess(response, planDetails, planType);
+                },
+                prefill: {
+                    name: currentUser.name,
+                    email: currentUser.email
+                },
+                theme: {
+                    color: '#10FF00'
+                },
+                modal: {
+                    ondismiss: function() {
+                        showNotification('Payment cancelled', 'warning');
+                    }
+                }
+            };
+
+            const razorpay = new Razorpay(options);
+            razorpay.open();
+            
+        } catch (error) {
+            showPopupError('Payment Error', 'Error initializing payment. Please try again.');
+        }
+    }
+
+    async function handlePaymentSuccess(response, planDetails, planType) {
+        try {
+            // Show loading state
+            document.getElementById('activationMessage').style.display = 'none';
+            showNotification('Processing payment...', 'info');
+            
+            // Verify payment with backend
+            const res = await fetch('api/subscription.php', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                body: `action=activate&order_id=${response.razorpay_order_id}&payment_id=${response.razorpay_payment_id}&signature=${response.razorpay_signature}`
+            });
+            
+            const data = await res.json();
+            
+            if (data.success) {
+                if (data.type === 'credits') {
+                    document.getElementById('activationText').textContent = `${data.credits} credits activated instantly!`;
+                    document.getElementById('activationMessage').style.display = 'block';
+                    updateCreditDisplay();
+                    showNotification(`${data.credits} credits added!`, 'success');
+                } else {
+                    document.getElementById('activationText').textContent = `Subscription activated! ${planDetails.duration} days access granted.`;
+                    document.getElementById('activationMessage').style.display = 'block';
+                    showNotification(`Subscription activated! ${planDetails.duration} days access`, 'success');
+                    await checkUserSubscription();
+                }
+                
+                setTimeout(() => {
+                    closeSubscriptionModal();
+                }, 3000);
+                
+            } else {
+                showPopupError('Payment Failed', data.message || 'Payment verification failed');
+                // Mark order as failed
+                await fetch('api/subscription.php', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                    body: `action=mark_failed&order_id=${response.razorpay_order_id}`
+                });
+            }
+        } catch (error) {
+            showPopupError('Payment Error', 'Payment processing error: ' + error.message);
+        }
+    }
+
+    async function checkUserSubscription() {
+        try {
+            const res = await fetch('api/subscription.php', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                body: 'action=check'
+            });
+            
+            const data = await res.json();
+            updateSubscriptionStatus(data);
+        } catch (error) {
+            console.error('Failed to check subscription:', error);
+        }
+    }
+
+    function updateSubscriptionStatus(data = null) {
+        const statusElement = document.getElementById('subscriptionStatus');
+        const countdownElement = document.getElementById('subscriptionCountdown');
+        
+        if (!data || !data.hasActive) {
+            statusElement.textContent = 'Free';
+            statusElement.className = 'status-trial';
+            if (countdownElement) countdownElement.innerHTML = '';
+            return;
+        }
+        
+        const endDate = new Date(data.endDate);
+        const now = new Date();
+        const daysLeft = Math.ceil((endDate - now) / (1000 * 60 * 60 * 24));
+        const hoursLeft = Math.ceil((endDate - now) / (1000 * 60 * 60));
+        
+        statusElement.textContent = `Active (${daysLeft} days left)`;
+        statusElement.className = 'status-active';
+        
+        if (countdownElement) {
+            const progressPercent = Math.max(0, Math.min(100, (daysLeft / 30) * 100));
+            const isWarning = daysLeft <= 3;
+            
+            countdownElement.innerHTML = `
+                <div class="countdown-bar mt-1">
+                    <div class="countdown-progress" style="width: ${progressPercent}%"></div>
+                </div>
+                <div class="countdown-text ${isWarning ? 'countdown-warning' : 'countdown-normal'} mt-1">
+                    ${daysLeft} days ${hoursLeft % 24} hours remaining
+                </div>
+                <div class="text-xs mt-1" style="color: var(--text-secondary);">
+                    Expires: ${endDate.toLocaleDateString()} ${endDate.toLocaleTimeString()}
+                </div>
+            `;
+        }
+    }
+
+    function updateSubscriptionCountdown() {
+        checkUserSubscription();
+    }
+
+    // History Functions
+    async function showPaymentHistory() {
+        try {
+            const res = await fetch('api/history.php?type=payment');
+            const history = await res.json();
+            const listDiv = document.getElementById('paymentHistoryList');
+            
+            listDiv.innerHTML = history.length ? history.map(payment => `
+                <div class="payment-item">
+                    <div class="payment-header">
+                        <span class="payment-plan">${payment.plan}</span>
+                        <span class="payment-amount">₹${payment.amount}</span>
+                    </div>
+                    <div class="payment-date">${new Date(payment.payment_date).toLocaleDateString()}</div>
+                    <div class="payment-status status-success">Success</div>
+                </div>
+            `).join('') : '<p class="text-center py-4" style="color: var(--text-secondary);">No payment history found</p>';
+            
+            document.getElementById('paymentHistoryModal').style.display = 'flex';
+            toggleUserDropdown();
+        } catch (error) {
+            showPopupError('History Error', 'Failed to load payment history');
+        }
+    }
+
+    async function showLookupHistory() {
+        try {
+            const res = await fetch('api/history.php?type=lookup');
+            const history = await res.json();
+            const listDiv = document.getElementById('lookupHistoryList');
+            
+            listDiv.innerHTML = history.length ? history.map(lookup => `
+                <div class="lookup-item">
+                    <div class="lookup-header">
+                        <span class="lookup-type">${lookup.type}</span>
+                        <span class="lookup-query">${lookup.query}</span>
+                    </div>
+                    <div class="lookup-date">${new Date(lookup.lookup_date).toLocaleString()}</div>
+                    <div class="lookup-result">${lookup.success ? 'Success' : 'Failed'}</div>
+                </div>
+            `).join('') : '<p class="text-center py-4" style="color: var(--text-secondary);">No lookup history found</p>';
+            
+            document.getElementById('lookupHistoryModal').style.display = 'flex';
+            toggleUserDropdown();
+        } catch (error) {
+            showPopupError('History Error', 'Failed to load lookup history');
+        }
+    }
+
+    // Lookup Functions
+    async function lookup(type) {
+        const inputField = type === 'aadhaar' ? 'aadhaar-input' : type === 'mobile' ? 'mobile-input' : 'family-input';
+        const query = document.getElementById(inputField).value.trim();
+        
+        if (!query) {
+            showPopupError('Input Required', `Please enter a ${type} ${type === 'family' ? 'Aadhaar' : 'number'}`);
+            return;
+        }
+        
+        if ((type === 'aadhaar' || type === 'family') && query.length !== 12) {
+            showPopupError('Invalid Input', 'Please enter a valid 12-digit Aadhaar number');
+            return;
+        }
+        
+        if (type === 'mobile' && query.length !== 10) {
+            showPopupError('Invalid Input', 'Please enter a valid 10-digit mobile number');
+            return;
+        }
+        
+        // Perform lookup
+        const resultDiv = document.getElementById(`${type}-result`);
+        resultDiv.innerHTML = `
+            <div class="flex items-center justify-center p-8">
+                <div class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-12 w-12 mb-4"></div>
+                <span class="ml-3">Accessing data stream...</span>
+            </div>
+        `;
+        
+        try {
+            const res = await fetch('api/lookup.php', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                body: `type=${type}&query=${query}`
+            });
+            
+            const lookupData = await res.json();
+            
+            if (lookupData.success) {
+                displayResults(type, lookupData.data, query);
+                showNotification(lookupData.wasCredit ? `Lookup successful! 1 credit deducted.` : 'Lookup successful! (Subscription)', 'success');
+                updateCreditDisplay();
+            } else {
+                throw new Error(lookupData.message);
+            }
+        } catch (error) {
+            resultDiv.innerHTML = `
+                <div class="error-card p-4 rounded-lg shadow-inner">
+                    <p class="font-semibold text-sm flex items-center">
+                        <span data-lucide="alert-circle" class="w-4 h-4 mr-2"></span>
+                        API Error: ${error.message || 'Failed to fetch data from server'}
+                    </p>
+                    <p class="text-xs mt-2">Please check your connection and try again.</p>
+                </div>
+            `;
+            lucide.createIcons();
+            showNotification('Lookup failed. No credit was deducted.', 'info');
+            
+            // Automatic redirect for insufficient credits
+            if (error.message && error.message.toLowerCase().includes('insufficient credits')) {
+                showNotification('Redirecting to purchase page...', 'warning');
+                setTimeout(() => {
+                    showSubscriptionModal();
+                }, 1500);
+            }
+        }
+    }
+
+    function displayResults(type, data, query) {
+        const resultDiv = document.getElementById(`${type}-result`);
+        
+        function jsonToHtml(obj) {
+            let html = '';
+            for (const [key, value] of Object.entries(obj)) {
+                if (value && typeof value === 'object') {
+                    html += `<div class='ml-3 mt-2 border-l-2 border-green-800 pl-3'>
+                        <p class='font-semibold mb-1 text-xs uppercase tracking-wider' style="color: var(--text-secondary);">${key}</p>
+                        ${jsonToHtml(value)}
+                    </div>`;
+                    continue;
+                }
+                html += `<div class='result-row flex flex-col md:flex-row md:items-center border-b pb-3' style="border-color: var(--border-color);">
+                    <span class='result-key'>${key}</span>
+                    <span class='result-value'>${value || 'N/A'}</span>
+                </div>`;
+            }
+            return html || '<p class="text-center py-3 text-sm" style="color: var(--text-secondary);">No data found in the system.</p>';
+        }
+        
+        resultDiv.innerHTML = `
+            <div class="data-card p-4 md:p-6 rounded-lg">
+                <h3 class="text-lg font-bold mb-4 flex items-center">
+                    <span data-lucide="check-circle" class="w-5 h-5 mr-2"></span>
+                    ${type === 'aadhaar' ? 'Aadhaar Verification' : type === 'mobile' ? 'Mobile Lookup' : 'Family Details'} Results
+                </h3>
+                <div class="space-y-3">
+                    <div class="result-row flex flex-col md:flex-row md:items-center border-b pb-3" style="border-color: var(--border-color);">
+                        <span class="result-key">${type === 'aadhaar' ? 'Aadhaar Number' : type === 'mobile' ? 'Mobile Number' : 'Aadhaar Number'}:</span>
+                        <span class="result-value">${query}</span>
+                    </div>
+                    ${jsonToHtml(data)}
+                </div>
+            </div>
+        `;
+        
+        lucide.createIcons();
+    }
+
+    // Utility Functions
+    function showNotification(message, type = 'info') {
+        const existingNotification = document.querySelector('.notification');
+        if (existingNotification) {
+            existingNotification.remove();
+        }
+        
+        const notification = document.createElement('div');
+        notification.className = `notification fixed top-4 right-4 p-4 rounded-lg shadow-lg z-50 max-w-sm ${
+            type === 'success' ? 'bg-green-100 text-green-800 border border-green-300' :
+            type === 'error' ? 'bg-red-100 text-red-800 border border-red-300' :
+            type === 'warning' ? 'bg-yellow-100 text-yellow-800 border border-yellow-300' :
+            'bg-blue-100 text-blue-800 border border-blue-300'
+        }`;
+        
+        notification.innerHTML = `
+            <div class="flex items-center">
+                <span data-lucide="${
+                    type === 'success' ? 'check-circle' :
+                    type === 'error' ? 'alert-circle' :
+                    type === 'warning' ? 'alert-triangle' : 'info'
+                }" class="w-5 h-5 mr-2"></span>
+                <span>${message}</span>
+            </div>
+        `;
+        
+        document.body.appendChild(notification);
+        lucide.createIcons();
+        
+        setTimeout(() => {
+            notification.remove();
+        }, 5000);
+    }
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(event) {
+        const userDashboard = document.getElementById('userDashboard');
+        const userDropdown = document.getElementById('userDropdown');
+        
+        if (userDashboard && !userDashboard.contains(event.target) && userDropdown.classList.contains('active')) {
+            userDropdown.classList.remove('active');
+        }
+        
+        const popupError = document.getElementById('popupErrorModal');
+        if (popupError && !popupError.classList.contains('hidden') && event.target === popupError) {
+            closePopupError();
+        }
+    });
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"05c3e71e8a15468088875698b7583858","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+body {
+    background: #050505 !important;
+    color: #f4f7fb !important;
+    font-family: 'Space Grotesk', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #f4f7fb !important;
+}
+
+p, li, span, div, td, th {
+    color: #aeb7c1 !important;
+}
+
+a {
+    color: #7dd3fc !important;
+}
+
+code, pre {
+    background: rgba(255, 255, 255, 0.04) !important;
+    color: #f4f7fb !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 12px !important;
+}
+
+pre {
+    padding: 20px !important;
+}
+
+table {
+    background: rgba(255, 255, 255, 0.025) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+th {
+    background: rgba(125, 211, 252, 0.08) !important;
+    color: #f4f7fb !important;
+}
+
+td, th {
+    border-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+img {
+    border-radius: 18px !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+strong, b {
+    color: #f4f7fb !important;
+}
