@@ -38,15 +38,13 @@
         <main>
             <section class="hero-section section-shell">
                 <div class="hero-copy">
-                    <p class="eyebrow">Profile</p>
-                    <h1 class="hero-title">Anil Kumar builds practical systems for operations, reporting, and workflow automation.</h1>
-                    <p class="hero-text">Operations Manager with a developer mindset, focused on automation, reporting, and practical internal tools that improve day-to-day execution.</p>
+                    <h1 class="hero-title">Building practical systems for operations, reporting, and workflow automation.</h1>
+                    <p class="hero-text">I design internal tools, automate repetitive work, and turn raw business data into clear operating decisions. This site brings together my developer profile and the tech tips I actively use.</p>
                     <div class="hero-actions">
-                        <a href="about.html" class="button button-primary">View Full Profile</a>
+                        <a href="about.html" class="button button-primary">Explore Profile</a>
                         <a href="assets/Profile.pdf" class="button button-secondary" target="_blank" rel="noopener">Open Resume</a>
                     </div>
                     <div class="hero-badges">
-                        <span class="badge-pill">Operations Manager</span>
                         <span class="badge-pill">Python</span>
                         <span class="badge-pill">SQL</span>
                         <span class="badge-pill">Power BI</span>
@@ -176,33 +174,6 @@
     </div>
 
     <script>
-        function toggleSearch() {
-            const navSearch = document.getElementById('navSearch');
-            const searchToggle = document.getElementById('searchToggle');
-            const searchInput = document.getElementById('mainSearch');
-            const navMenu = document.querySelector('.site-nav');
-            const menuToggle = document.querySelector('.nav-menu-toggle');
-
-            if (navMenu && navMenu.classList.contains('active')) {
-                navMenu.classList.remove('active');
-                if (menuToggle) {
-                    menuToggle.classList.remove('active');
-                    menuToggle.setAttribute('aria-expanded', 'false');
-                }
-            }
-
-            if (navSearch.classList.contains('active')) {
-                navSearch.classList.remove('active');
-                searchToggle.style.display = 'inline-flex';
-                searchInput.value = '';
-                filterCards('');
-            } else {
-                navSearch.classList.add('active');
-                searchToggle.style.display = 'none';
-                setTimeout(() => searchInput.focus(), 100);
-            }
-        }
-
         function openLink(url, newTab = false) {
             if (newTab) {
                 window.open(url, '_blank', 'noopener');
@@ -211,23 +182,6 @@
 
             window.location.href = url;
         }
-
-        function filterCards(searchTerm) {
-            const cards = document.querySelectorAll('.searchable-card');
-            cards.forEach(function(card) {
-                const text = card.textContent.toLowerCase();
-                card.style.display = text.includes(searchTerm) ? '' : 'none';
-            });
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const searchInput = document.getElementById('mainSearch');
-            if (searchInput) {
-                searchInput.addEventListener('input', function() {
-                    filterCards(searchInput.value.toLowerCase());
-                });
-            }
-        });
     </script>
 </body>
 </html>
