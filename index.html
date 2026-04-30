@@ -8,6 +8,7 @@
     <title>Anil Kumar | Developer Portfolio</title>
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
 	<link rel="stylesheet" href="assets/css/style.css">
+	<script src="assets/js/site.js" defer></script>
 </head>
 <body>
     <div class="site-shell">
@@ -16,6 +17,9 @@
                 <a class="brand-mark" href="index.html">ANIL<span>/DEV</span></a>
                 <button class="nav-search-toggle" id="searchToggle" onclick="toggleSearch()" aria-label="Open search">
                     <i class="ti-search"></i>
+                </button>
+                <button class="nav-menu-toggle" type="button" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
+                    <i class="ti-menu"></i>
                 </button>
                 <div class="nav-search" id="navSearch">
                     <input type="text" id="mainSearch" class="nav-search-input" placeholder="Search projects, skills, and tips...">
@@ -174,6 +178,16 @@
             const navSearch = document.getElementById('navSearch');
             const searchToggle = document.getElementById('searchToggle');
             const searchInput = document.getElementById('mainSearch');
+            const navMenu = document.querySelector('.site-nav');
+            const menuToggle = document.querySelector('.nav-menu-toggle');
+
+            if (navMenu && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                if (menuToggle) {
+                    menuToggle.classList.remove('active');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                }
+            }
 
             if (navSearch.classList.contains('active')) {
                 navSearch.classList.remove('active');
