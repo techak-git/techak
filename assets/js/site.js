@@ -62,6 +62,21 @@ function initializeSiteHeader() {
 	});
 }
 
+function initializeScrollPosition() {
+	if ('scrollRestoration' in window.history) {
+		window.history.scrollRestoration = 'manual';
+	}
+
+	if (window.location.hash) {
+		return;
+	}
+
+	window.scrollTo(0, 0);
+	window.requestAnimationFrame(function() {
+		window.scrollTo(0, 0);
+	});
+}
+
 function initializeScrollEffects() {
 	if (document.body.dataset.scrollEffectsInitialized === 'true') {
 		return;
@@ -71,7 +86,8 @@ function initializeScrollEffects() {
 
 	const revealSelectors = [
 		'.hero-copy > *',
-		'.hero-panel',
+		'.terminal-card',
+		'.terminal-body p',
 		'.section-heading',
 		'.metric-card',
 		'.feature-card',
@@ -97,7 +113,14 @@ function initializeScrollEffects() {
 	elements.forEach(function(element, index) {
 		element.classList.add('scroll-reveal');
 		element.classList.add('scroll-focus-item');
-		element.style.setProperty('--reveal-delay', `${(index % 6) * 80}ms`);
+		element.style.setProperty('--reveal-delay', `${(index % 6) * 55}ms`);
+	});
+
+	elements.forEach(function(element, index) {
+		const rect = element.getBoundingClientRect();
+		if (index === 0 || (rect.bottom > 0 && rect.top < window.innerHeight)) {
+			element.classList.add('is-visible');
+		}
 	});
 
 	if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -149,28 +172,38 @@ function initializeScrollFocus(elements) {
 
 	function updateActiveElement() {
 		ticking = false;
+		const scrollTop = window.scrollY || window.pageYOffset;
+		const maxScrollTop = Math.max(document.documentElement.scrollHeight - window.innerHeight, 0);
 		const viewportCenter = window.innerHeight * 0.5;
 		let activeElement = null;
 		let bestDistance = Number.POSITIVE_INFINITY;
-
-		elements.forEach(function(element) {
+		const visibleElements = elements.filter(function(element) {
 			if (!element.classList.contains('is-visible')) {
-				return;
+				return false;
 			}
 
 			const rect = element.getBoundingClientRect();
-			if (rect.bottom <= 0 || rect.top >= window.innerHeight) {
-				return;
-			}
-
-			const elementCenter = rect.top + rect.height / 2;
-			const distance = Math.abs(elementCenter - viewportCenter);
-
-			if (distance < bestDistance) {
-				bestDistance = distance;
-				activeElement = element;
-			}
+			return rect.bottom > 0 && rect.top < window.innerHeight;
 		});
+
+		if (scrollTop <= 12) {
+			activeElement = visibleElements[0] || elements[0] || null;
+		} else if (maxScrollTop - scrollTop <= 12) {
+			activeElement = visibleElements[visibleElements.length - 1] || elements[elements.length - 1] || null;
+		}
+
+		if (!activeElement) {
+			visibleElements.forEach(function(element) {
+				const rect = element.getBoundingClientRect();
+				const elementCenter = rect.top + rect.height / 2;
+				const distance = Math.abs(elementCenter - viewportCenter);
+
+				if (distance < bestDistance) {
+					bestDistance = distance;
+					activeElement = element;
+				}
+			});
+		}
 
 		elements.forEach(function(element) {
 			element.classList.toggle('is-active', element === activeElement);
@@ -188,13 +221,16 @@ function initializeScrollFocus(elements) {
 
 	window.addEventListener('scroll', requestUpdate, { passive: true });
 	window.addEventListener('resize', requestUpdate);
-	window.setTimeout(requestUpdate, 120);
+	requestUpdate();
+	window.setTimeout(requestUpdate, 80);
 }
 
 if (document.readyState === 'loading') {
+	document.addEventListener('DOMContentLoaded', initializeScrollPosition);
 	document.addEventListener('DOMContentLoaded', initializeSiteHeader);
 	document.addEventListener('DOMContentLoaded', initializeScrollEffects);
 } else {
+	initializeScrollPosition();
 	initializeSiteHeader();
 	initializeScrollEffects();
 }
